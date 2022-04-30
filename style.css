@@ -215,3 +215,13 @@ footer a {
 footer a:hover {
     transform: translateY(-10px);
 }
+
+@media (max-width: 600px) {
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    footer a {
+        padding: 0.5rem 0.3rem;
+    }
+}
