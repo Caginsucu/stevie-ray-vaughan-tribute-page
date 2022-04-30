@@ -10,6 +10,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -103,4 +104,114 @@ header::before {
     }
 }
 
-/* background-image: linear-gradient(to right top, #918a68, #6a7a61, #4d685d, #3d5354, #343f44); */
+main {
+    position: relative;
+    display: flex;
+    /* height: 100vh; */
+
+    background: linear-gradient(189deg, #5f541e, #b1ab99, #7c7766, #006158, #2a9589);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: myMove 9s ease infinite;
+    -moz-animation: myMove 9s ease infinite;
+    animation: myMove 9s ease infinite;
+
+
+}
+
+/* Bacground Animation */
+@-webkit-keyframes myMove {
+    0% {
+        background-position: 19% 0%
+    }
+
+    50% {
+        background-position: 82% 100%
+    }
+
+    100% {
+        background-position: 19% 0%
+    }
+}
+
+@-moz-keyframes myMove {
+    0% {
+        background-position: 19% 0%
+    }
+
+    50% {
+        background-position: 82% 100%
+    }
+
+    100% {
+        background-position: 19% 0%
+    }
+}
+
+@keyframes myMove {
+    0% {
+        background-position: 19% 0%
+    }
+
+    50% {
+        background-position: 82% 100%
+    }
+
+    100% {
+        background-position: 19% 0%
+    }
+}
+
+article {
+    width: 85%;
+    /* background-color: magenta; */
+    margin: 3rem auto;
+    text-align: center;
+    color: var(--whiteish);
+    border: 2px solid var(--whiteish);
+}
+
+article>h2 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+article p {
+    text-align: left;
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    line-height: 1.5rem;
+
+}
+
+article p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background-color: #435557;
+    color: var(--whiteish);
+}
+
+footer>p {
+    padding: 2.5rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: turquoise;
+    padding: 0.7rem 0.5rem;
+    border-radius: 2rem;
+    transition: transform .5s ease-in;
+}
+
+footer a:hover {
+    transform: translateY(-10px);
+}
